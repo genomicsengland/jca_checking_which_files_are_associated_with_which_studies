@@ -17,7 +17,7 @@ samples_to_be_queried <- read.csv(file = "/Users/johnambrose/Downloads/ready_to_
 file_search <- function(study, pattern){
   files <- NULL
   try(files <- fileClient(OpencgaR = con, action = "search", params = list(study = study, name = pattern, include = "name")), silent = TRUE)
-  if(!is.null(files)){return(files$name)}
+  if(!is.null(files$name)){return(files$name)}
   else{return("NA")}
 }
 
