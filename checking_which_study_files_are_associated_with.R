@@ -4,9 +4,6 @@ library(getPass); packageDescription ("getPass", fields = "Version")
 # Connect to openCGA
 con <- initOpencgaR(host="https://opencgainternal.gel.zone/opencga/", version="v1")
 
-# # Do it interactively like
-#con <- opencgaLogin(opencga = con, userid = "jambrose", interactive = TRUE)
-
 # or the traditional way
 con <- opencgaLogin(opencga = con, userid = "jambrose", passwd = getPass())
 
